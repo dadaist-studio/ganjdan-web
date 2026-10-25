@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Ganjdan</title>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <link rel="icon" href="/ganjdan-web/favicon.ico"/><link rel="manifest" href="/ganjdan-web/manifest.json" />
+    <link rel="apple-touch-icon" href="/ganjdan-web/icons/icon-180.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="گنجدان" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#F2EBDD" />
+  <style>
+      html, body { background: #F2EBDD; }
+      /* Holding the fal seal (or any picture) must not open iOS's save/share sheet. */
+      img { -webkit-touch-callout: none; -webkit-user-drag: none; user-select: none; }
+      body { -webkit-touch-callout: none; }
+      @media (prefers-color-scheme: dark) { html, body { background: #0D0D0F; } #boot { color: #F2EBDD !important; } }
+      #boot { position: fixed; inset: 0; z-index: 9999; background: inherit; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; font-family: -apple-system, system-ui, sans-serif; direction: rtl; color: #0D0D0F; }
+      #boot img { width: 112px; height: 112px; border-radius: 26px; animation: boot 1.6s ease-in-out infinite; }
+      #boot p { margin: 0; font-size: 16px; text-align: center; line-height: 1.8; }
+      #boot small { display: block; opacity: .6; font-size: 13px; }
+      @keyframes boot { 50% { transform: scale(.92); opacity: .7; } }
+      /* A moving bar and a seconds count, so the wait reads as progress (Dara, 2026-10-25). */
+      #boot .bar { width: 160px; height: 4px; border-radius: 2px; background: rgba(212, 88, 44, .2); overflow: hidden; }
+      #boot .bar i { display: block; width: 40%; height: 100%; border-radius: 2px; background: #D4582C; animation: bar 1.2s ease-in-out infinite; }
+      @keyframes bar { from { transform: translateX(-100%); } to { transform: translateX(250%); } }
+      #boot .secs { font-size: 13px; opacity: .6; min-height: 1em; }
+    </style>
+  </head>
+
+  <body>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="boot"><img src="/ganjdan-web/icons/icon-180.png" alt="" /><p>گنجدان در حال آماده شدن است…<small>بار نخست کمی بیشتر زمان می‌برد؛ خواهشمندیم شکیبایی پیشه کنید.</small></p><div class="bar"><i></i></div><p class="secs" id="boot-secs"></p></div>
+    <script>(function(){var t=0,e=document.getElementById('boot-secs');var h=setInterval(function(){if(!document.getElementById('boot'))return clearInterval(h);t++;e.textContent=t.toLocaleString('fa-IR')+' ثانیه';},1000);})();</script>
+    <div id="root"></div>
+  <script src="/ganjdan-web/_expo/static/js/web/__expo-metro-runtime-8c088df87a31e4e6accd81c554ec290d.js" defer></script><script src="/ganjdan-web/_expo/static/js/web/__common-43c4dee52547ef1a0d23bfa3f858b375.js" defer></script><script src="/ganjdan-web/_expo/static/js/web/entry-eeebdf8e1eb0975b8d0e29352833540e.js" defer></script>
+</body>
+</html>
